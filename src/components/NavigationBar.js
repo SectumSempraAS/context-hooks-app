@@ -19,7 +19,6 @@ class NavigationBar extends Component {
                     <li>Books</li>
                     <li>Contact</li>
                 </ul>
-
             </nav>
         );
     }
