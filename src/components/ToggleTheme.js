@@ -1,17 +1,13 @@
-import React, { Component } from 'react';
+import React, {useContext} from 'react';
 import {Themes} from "../contexts/Themes";
 
-class ToggleTheme extends Component {
-    static contextType = Themes;
-    render(){
-        console.log(this.context);
-        return(
-            <button type='radio'
-                   onClick={this.context.toggleTheme}>
-                DARK MODE
-            </button>
-        )
-    }
+const ToggleTheme = () => {
+    const {toggleTheme} = useContext(Themes)
+    return(
+        <button type='radio'
+                onClick={toggleTheme}>
+            DARK MODE
+        </button>
+    )
 }
-
 export default ToggleTheme;
